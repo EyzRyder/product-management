@@ -37,7 +37,6 @@ export class ProductFormComponent {
   }
 
   onSubmit() {
-console.log(this.productForm.controls)
     if (this.productForm.invalid) {
       return;
     }
