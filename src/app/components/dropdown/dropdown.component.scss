@@ -1,0 +1,23 @@
+.dropdownContainer{
+  position: relative;
+  width: 200px;
+  ul{
+    background: rgb(var(--secondery-rgb),.8);
+    position: absolute;
+    margin-top: 12px;
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #fff;
+    border-radius: 6PX;
+    li{
+      text-align: center;
+      padding: 6px;
+      color:white;
+      list-style: none;
+      cursor: pointer;
+      &:hover{
+        background: rgba(255,255,255,.2);
+      }
+    }
+  }
+}

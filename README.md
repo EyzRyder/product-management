@@ -1,27 +1,105 @@
-# ProductForm
+# Sistema de gerenciamento de produtos
+Este é um sistema simples de gerenciamento de produtos construído com Angular. Ele permite adicionar, visualizar e listar produtos com detalhes básicos como nome, descrição, preço e disponibilidade.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+## Features
 
-## Development server
+- Adicione novos produtos com os seguintes detalhes:
+  - Nome
+  - Descrição
+  - Preço
+  - Disponibilidade (sim/não)
+- Veja uma lista de produtos
+  - Ordenado por preço (crescente)
+  - Exibe nome e preço do produto
+  - Exibir e esconder as colunas
+- Navegação entre a lista de produtos e o formulário do produto
+- Design responsivo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Começando
 
-## Code scaffolding
+### Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js and npm (Node Package Manager)
+- Angular CLI
 
-## Build
+### Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone o repositório:
 
-## Running unit tests
+   ```bash
+   git clone https://github.com/EyzRyder/product-management.git
+   cd product-management
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Instale as dependências:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Sirva o aplicativo:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Abra seu navegador e navegue até http://localhost:4200.
+
+### Executando testes
+Para executar os testes de unidade deste projeto, use o seguinte comando:
+
+```bash
+ng test
+```
+
+Isso executará os testes de unidade usando Karma e Jasmine.
+
+## Estrutura do Projeto
+```text
+src/
+ ├── app/
+ |    |
+ │    ├──components
+ |    |     |
+ |    |     |
+ |    |     ├── product-form/           # Product form component
+ |    │     │    ├── product-form.component.html
+ |    │     │    ├── product-form.component.ts
+ |    │     │    ├── product-form.component.spec.ts
+ |    │     │    └── product-form.component.scss
+ |    │     ├── product-list/           # Product list component
+ |    │     │    ├── product-list.component.html
+ |    │     │    ├── product-list.component.ts
+ |    │     │    ├── product-list.component.spec.ts
+ |    │     |    └── product-list.component.scss
+ |    │     └── dropdown/           #  Dropdown component
+ |    │          ├── dropdown.component.ts
+ |    │          ├── dropdown.component.spec.ts
+ |    │          └── dropdown.component.scss
+ |    ├── product.service.ts      # Product service for managing products
+ |    ├── product.service.spec.ts # Tests for product service
+ |    ├── app.routes.ts   # App routing module
+ |    ├── app.component.html
+ |    ├── app.component.scss
+ |    ├── app.component.spec.ts
+ |    ├── app.component.ts
+ |    └── app.config.ts
+ ├── index.html                   # Main HTML file
+ ├── main.ts                      # Main entry point
+ ├── styles.scss                   # Global styles
+ └── ...
+```
+## Uso
+### Adicionando um produto
+1. Navegue até a página "adicionar produto" clicando no botão "Adicionar" na página de listagem de produtos.
+2. Preencha o formulário com os dados do produto.
+3. Clique em “Cadastrar” para salvar o produto. Você será redirecionado automaticamente para a página de listagem de produtos.
+
+### Visualizando produtos
+1. Navegue até a página "Lista de produtos".
+2. Você verá uma lista de produtos classificados por preço em ordem crescente.
+
+## Construído com
+- Angular - O framework web utilizado
+- Angular CLI - Interface de linha de comando para Angular
+

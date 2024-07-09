@@ -1,0 +1,41 @@
+<main class="flex-col-center">
+    <header>
+        <h2>Lista de Produtos</h2>
+        <div class="btns">
+
+            <dropdown [values]="dropdownValues"></dropdown>
+
+            <a class="button" routerLink="/add-produto">
+                Adicionar
+            </a>
+        </div>
+    </header>
+    <div class="table-wrap">
+
+        <table>
+            <thead>
+                <tr>
+                    <th *ngIf="dropdownValues.get('Nome')">Nome</th>
+                    <th *ngIf="dropdownValues.get('Valor')">Valor</th>
+                    <th *ngIf="dropdownValues.get('Status')">Status</th>
+                    <th *ngIf="dropdownValues.get('Descrição')">Descrição</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let produto of produtos">
+                    <td *ngIf="dropdownValues.get('Nome')">{{produto.nome}}</td>
+                    <td *ngIf="dropdownValues.get('Valor')">R$ {{produto.valor}}</td>
+                    <td class="status" *ngIf="dropdownValues.get('Status')">
+                        <span [ngClass]="produto.disponivel?'disponivel':'indisponivel'">
+                            {{produto.disponivel?"Disponivel":"Indisponivel"}}
+                        </span>
+                    </td>
+                    <td class="descricao" *ngIf="dropdownValues.get('Descrição')">
+                        {{produto.descricao}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>

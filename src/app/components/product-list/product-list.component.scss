@@ -1,0 +1,130 @@
+main {
+  background-image: var(--linearGradiante);
+  padding: 24px 40px;
+
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .btns{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:12px
+    }
+
+    .button {
+      width: fit-content;
+      text-decoration: none;
+    }
+
+    padding-bottom: 1rem;
+  }
+
+  .table-wrap {
+    display: block;
+    overflow-x: scroll;
+    scrollbar-color: white transparent;
+    scrollbar-highlight-color: black transparent;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+
+
+  table {
+    display: table;
+    transition: all .2s ease !important;
+    min-width: 1000px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+      display: table-header-group;
+      vertical-align: middle;
+      unicode-bidi: isolate;
+      border-color: none;
+    }
+
+    tbody {
+      display: table-row-group;
+      vertical-align: middle;
+      unicode-bidi: isolate;
+      border-color: none;
+    }
+
+    tr {
+      border-bottom: 4px, solid rgb(236, 239, 250);
+
+    &:nth-child(odd)>td{
+      background: rgb(255, 255, 255);
+      }
+
+      &:nth-child(even)>td{
+        background: rgb(235 235 235);
+      }
+    }
+
+    th,
+    td {
+      display: table-cell;
+      border: none;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    th {
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      background: rgb(var(--secondery-rgb));
+    }
+
+
+    td {
+      font-size: 14px;
+      vertical-align: middle;
+      color: rgb(var(--secondery-rgb));
+
+      &.status>span {
+        position: relative;
+        border-radius: 30px;
+        padding: 4px 10px 4px 25px;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 10px;
+          width: 10px;
+          height: 10px;
+          content: '';
+          border-radius: 50%;
+        }
+
+        &.disponivel {
+          background: #cff6dd;
+          color: #1fa750;
+          &::after{
+          background: #1fa750;
+          }
+        }
+
+        &.indisponivel {
+          background: #f6cfcf;
+          color: #a71f1f;
+          &::after{
+          background: #a71f1f;
+          }
+        }
+      }
+
+      &.descricao {
+        text-align: center;
+      }
+    }
+  }
+}

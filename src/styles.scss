@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-rgb: 0, 208, 132;
+  --secondery-rgb: 37, 79, 68;
+  --linearGradiante:linear-gradient(36deg, rgb(71, 179, 104) 0%, rgb(28, 136, 148) 100%);
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: normal;
+  background: #f8f9fd;
+  color: black;
+}
+
+main {
+  min-height: 100vh;
+  height: 100%;
+
+  &.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+button,
+.button {
+  width: 100%;
+  text-align: center;
+  border: 0;
+  background-color: rgb(var(--secondery-rgb));
+  color: rgb(255, 255, 255);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  transition: all .2s ease !important;
+
+  &:hover {
+    color: rgb(var(--primary-rgb));
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: .65px;
+  }
+}
