@@ -7,11 +7,11 @@ main {
     width: 100%;
     justify-content: space-between;
 
-    .btns{
+    .btns {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap:12px
+      gap: 12px
     }
 
     .button {
@@ -59,11 +59,11 @@ main {
     tr {
       border-bottom: 4px, solid rgb(236, 239, 250);
 
-    &:nth-child(odd)>td{
-      background: rgb(255, 255, 255);
+      &:nth-child(odd)>td {
+        background: rgb(255, 255, 255);
       }
 
-      &:nth-child(even)>td{
+      &:nth-child(even)>td {
         background: rgb(235 235 235);
       }
     }
@@ -108,16 +108,18 @@ main {
         &.disponivel {
           background: #cff6dd;
           color: #1fa750;
-          &::after{
-          background: #1fa750;
+
+          &::after {
+            background: #1fa750;
           }
         }
 
         &.indisponivel {
           background: #f6cfcf;
           color: #a71f1f;
-          &::after{
-          background: #a71f1f;
+
+          &::after {
+            background: #a71f1f;
           }
         }
       }
@@ -126,5 +128,18 @@ main {
         text-align: center;
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  header {
+    text-align: center;
+    flex-direction: column;
+
+    .btns {
+      flex-direction: column;
+    }
+
   }
 }
