@@ -31,7 +31,7 @@
                             {{produto.disponivel?"Disponivel":"Indisponivel"}}
                         </span>
                     </td>
-                    <td class="descricao" *ngIf="dropdownValues.get('Descrição')">
+                    <td *ngIf="dropdownValues.get('Descrição')">
                         {{produto.descricao}}
                     </td>
                 </tr>
