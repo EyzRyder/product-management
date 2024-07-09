@@ -1,5 +1,6 @@
 # Sistema de gerenciamento de produtos
-Este é um sistema simples de gerenciamento de produtos construído com Angular. Ele permite adicionar, visualizar e listar produtos com detalhes básicos como nome, descrição, preço e disponibilidade.
+Este é um sistema simples de gerenciamento de produtos construído com Angular. Ele permite adicionar, visualizar e listar produtos com detalhes básicos como nome, descrição, preço e disponibilidade. 
+(LINK)[https://product-management-ruddy.vercel.app/produtos]
 
 ## Features
 
