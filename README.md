@@ -33,24 +33,24 @@ Este é um sistema simples de gerenciamento de produtos construído com Angular.
 
 2. Instale as dependências:
 
-```bash
-npm install
-```
+  ```bash
+  npm install
+  ```
 
 3. Sirva o aplicativo:
 
-```bash
-ng serve
-```
+  ```bash
+  ng serve
+  ```
 
 4. Abra seu navegador e navegue até http://localhost:4200.
 
 ### Executando testes
 Para executar os testes de unidade deste projeto, use o seguinte comando:
 
-```bash
-ng test
-```
+  ```bash
+  ng test
+  ```
 
 Isso executará os testes de unidade usando Karma e Jasmine.
 
